@@ -22,7 +22,7 @@ def list_of_collections():
     return (client.list_collections())
     
 def main():
-    st.title("PrivateGPT App: Document Embedding and Retrieval")
+    st.title("AI For Document Embedding and Retrieval")
     
     # Document upload section
     st.header("Document Upload")
@@ -80,9 +80,9 @@ def retrieve_documents(query: str, collection_name: str):
         st.subheader("Results")
         st.text(result["results"])
         
-        st.subheader("Documents")
-        for doc in result["docs"]:
-            st.text(doc)
+        #st.subheader("Documents")
+        #for doc in result["docs"]:
+        #    st.text(doc)
     else:
         st.error("Failed to retrieve documents.")
         st.write(response.text)
