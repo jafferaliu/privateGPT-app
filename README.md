@@ -61,7 +61,8 @@ Please update the `API_BASE_URL` to appropriate FastAPI url
 
 To run the Streamlit app, use the following command:
 ```
-streamlit run streamlit_app.py --server.address localhost
+streamlit run streamlit_app.py --server.address localhost 
+streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port 80
 ```
 This command launches the Streamlit app and connects it to the backend server running at `localhost`.
 
