@@ -1,5 +1,13 @@
 # PrivateGPT App
 
+install python3.11
+
+apt install build-essential checkinstall libreadline-gplv2-dev  libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev 
+
+add-apt-repository ppa:deadsnakes/ppa 
+
+apt install python3.11 python3.11-dev python3.11-venv
+
 This repository contains a FastAPI backend and Streamlit app for PrivateGPT, an application built by [imartinez](https://github.com/imartinez). The PrivateGPT App provides an interface to privateGPT, with options to embed and retrieve documents using a language model and an embeddings-based retrieval system. All data remains local. 
 
 Easiest way to deploy:
