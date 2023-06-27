@@ -6,6 +6,7 @@ from typing import List
 import json
 import socket
 from urllib3.connection import HTTPConnection
+import time
 
 API_BASE_URL = os.environ.get("API_BASE_URL")
 
@@ -61,6 +62,7 @@ def get_collection_names():
 
 
 def retrieve_documents(query: str, collection_name: str):
+    start_time = time.time()
     endpoint = f"{API_BASE_URL}/retrieve"
     data = {"query": query, "collection_name": collection_name}
 
@@ -75,6 +77,9 @@ def retrieve_documents(query: str, collection_name: str):
     )
     
     response = requests.post(endpoint, params=data)
+    inference_time = time.time() - start_time
+    print(f'Total Inference Time: {inference_time} seconds')
+    
     if response.status_code == 200:
         result = response.json()
         st.subheader("Results")
