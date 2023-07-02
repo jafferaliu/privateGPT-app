@@ -66,6 +66,20 @@ streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port 80
 ```
 This command launches the Streamlit app and connects it to the backend server running at `localhost`.
 
+
+
+### Running Chainlit App 
+
+install chainlit using pip install -r requirements_chainlit.txt
+
+start the app inside the app folder 
+
+```
+chainlit run chainlit-app.py --host "hostname" --port 8080
+
+```
+
+
 ### Important Considerations
 
 - Embedding documents is a quick process, but retrieval may take a long time due to the language model generation step. Optimization efforts are required to improve retrieval performance.
